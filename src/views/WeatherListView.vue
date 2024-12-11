@@ -3,8 +3,12 @@
         <div class="flex flex-col space-y-4">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold">Weather</h1>
-                <p>Profile icon</p>
+                <img src="@/assets/icons/profile.svg" alt="">
             </div>
+
+            <RouterLink to="search">
+                <button>Search</button>
+            </RouterLink>
 
             <div class="card">
                 <LocationCard />
@@ -16,6 +20,7 @@
 
 <script setup lang="ts">
 import { LocationCard } from "@/components";
+import { RouterLink } from 'vue-router';
 
 </script>
 
