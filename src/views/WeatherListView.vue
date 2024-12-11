@@ -3,7 +3,9 @@
         <div class="flex flex-col space-y-4">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold">Weather</h1>
-                <img src="@/assets/icons/profile.svg" alt="">
+                <RouterLink to="profile">
+                    <img src="@/assets/icons/profile.svg" alt="">
+                </RouterLink>
             </div>
 
             <RouterLink to="search">
