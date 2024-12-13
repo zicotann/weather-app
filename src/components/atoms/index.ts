@@ -1,1 +1,1 @@
-export {default as Input} from '@/components/atoms/SearchInput.vue'
+export {default as SearchInput} from '@/components/atoms/SearchInput.vue'
