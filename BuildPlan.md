@@ -18,5 +18,6 @@
 6. Set up Weather store (Pinia) to:
     - Init a locations state (Array of locations for weather listing)
     - Add action to append selected location to locations state
+    - Get active weather details page
 7. Setup profile page with edit mode 
     - Use vee validate to validate fields
