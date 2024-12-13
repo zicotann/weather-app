@@ -11,6 +11,9 @@
             <span class="condition">Moderate Rain</span>
             <span>H:24º L:24º</span>
         </div>
+        <div class="card__bg">
+            <img src="../assets/images/sky.png" alt="">
+        </div>
     </div>
 </template>
 
@@ -21,12 +24,27 @@
 <style lang="scss">
 
 .card {
-    background-color: #e8e8e8;
-    border-radius: 10px;
-    padding: 8px;
+    // background-color: #e8e8e8;
+    color: white;
+    border-radius: 18px;
+    padding: 16px;
     gap: 16px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     &__row {
         display: flex;
