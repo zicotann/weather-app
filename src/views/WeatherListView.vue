@@ -9,13 +9,12 @@
             </div>
 
             <RouterLink to="search">
-                <button>Search</button>
+                <SearchInput class="w-full"></SearchInput>
             </RouterLink>
 
-            <div class="card">
+            <RouterLink :to="{name: 'weather-detail'}">
                 <LocationCard />
-            </div>
-
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -23,6 +22,13 @@
 <script setup lang="ts">
 import { LocationCard } from "@/components";
 import { RouterLink } from 'vue-router';
+import { useWeatherStore } from '@/stores/weather';
+import { SearchInput } from '@/components';
+
+const weatherStore = useWeatherStore();
+
+weatherStore.getWeather();
+
 
 </script>
 
