@@ -9,26 +9,20 @@ const router = createRouter({
       path: '/',
       name: 'weather',
       component: WeatherList,
-      children: [{
-        path: 'detail/:id',
-        name: 'weather-detail',
-        component: WeatherDetailView
-      }],
+    },
+    {
+      path: '/weather-detail',
+      name: 'weather-detail',
+      component: WeatherDetailView
     },
     {
       path: '/profile',
       name: 'profile',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/ProfileView.vue'),
     },
     {
       path: '/search',
       name: 'search',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/WeatherSearchView.vue'),
     },
   ],
